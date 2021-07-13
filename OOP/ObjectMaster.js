@@ -27,7 +27,7 @@ const pokémon = Object.freeze([
     console.log(bListPkmn);
     const pkmnIds = pokémon.map( p => p.id )
     console.log(pkmnIds);
-    const pokémondv=pokémon.filter(id =>id/3===0);
+    const pokémondv=pokémon.filter(id =>id.id%3==0);
     console.log(pokémondv);
     const poFire=pokémon.filter(p=>p.types.includes("fire"));
     console.log(poFire);
