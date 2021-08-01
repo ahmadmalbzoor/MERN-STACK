@@ -1,0 +1,45 @@
+What is NPM?
+Npm is a package manager and the default tool that comes with Node.js to manage your project dependencies.
+==========================================================================================================
+What are dependencies? In this case, they’re just JavaScript files and libraries that give us tools 
+to make applications with.
+==========================================================================================================
+Bable :convert the JSX file to react code.
+===========================================
+-JSX stands for JavaScript xml.
+-JSX allows us to write html in react 
+-React uses JSX for templating instead reqular javaScript 
+JSX like HTML
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Webpack is an amazing tool that allows us to break our apps down into smaller modules and transform 
+them based on tools called loaders.It's definitely a technology worth looking into
+(يقوم بقراءة جميع الملفات الموجودع بالمشروع ويحدد العلاقات بين الملفات bundlers )
+=============================================================================
+What are class components?
+Class components are react components that are defined using ES6 classes.
+========================================================================
+The render method is used to render DOM nodes and is the only required* method in the class component.
+ The class component may also contain other built-in methods called Lifecycle Methods, 
+=====================================================================================
+Children: Children of components are those element(s)/component(s) that are within 
+the two "tags" of JSX elements.
+======================================================================================
+hook: generally speaking, is just a function, either built-in or custom, that allows you to "hook" in or 
+use a certain piece of functional
+===========================================================================
+props we use it to make hte code reusable and use it in many place 
+props is an empty object that is passed to every React component by default
+To pass props down to our child components, we simply need to add an html attribute to our component.
+ Each attribute will become a key in the props object and each value given to that attribute will become
+ the value of that key.
+================================================================================================
+Track input values as a piece of your state, updating them on change events and rendering them back out to the UI.
+ These are called controlled components
+=================================================================================================
+refs: Attach a pointer to DOM nodes like inputs and textareas and reach out to inspect their values once our form is submitted.
+We call these uncontrolled components.
+
+Refs are normally used to access DOM elements generally to set or get the html properties such as Width, Height etc.
+ You can also use it to get the value e.g from a text field. States define the properties of a component
+ that can change by different actions you perform.
+=================================================================================================
