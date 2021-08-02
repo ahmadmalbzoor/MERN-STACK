@@ -11,12 +11,17 @@ import axios from 'axios';
             setProduct(res.data);
             setLoaded(true);
       }, [product,load])})
+      
+      const removeFromDom = productId => {
+        setProduct(product.filter(product => product._id != productId));
+    }
     
     return (
         <div>
             
                 <Client/>
-                {load && <ListClient product={product}/>}
+                <hr/>
+                {load && <ListClient product={product} removeFromDom={removeFromDom}/>}
             
         </div>
     )
