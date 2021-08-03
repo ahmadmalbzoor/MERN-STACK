@@ -1,21 +1,14 @@
 import axios from 'axios';
 import React,{useState} from 'react';
-const Client = () => {
-    const [type, setType] = useState("");
-    const [price, setPrice] = useState();
-    const [description, setDescription] = useState("");
+const Client = (props) => {
+    const { initialType, initialPrice,initialDescription, onSubmitProp } = props;
+    const [type, setType] = useState(initialType);
+    const [price, setPrice] = useState(initialPrice);
+    const [description, setDescription] = useState(initialDescription);
     const handelSubmit=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:8000/api/product',{type,price,description})
-        .then(res=>{console.log(res)
-            setType("");
-            setPrice("");
-            setDescription("");
-        
-        })
-
-        .catch(err=>console.log(err))
-    
+        onSubmitProp({type,price,description});
+       
     }
     const handeltitle=(e)=>{
         e.preventDefault();

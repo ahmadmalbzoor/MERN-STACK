@@ -15,11 +15,17 @@ import axios from 'axios';
       const removeFromDom = productId => {
         setProduct(product.filter(product => product._id != productId));
     }
-    
+    const createProduct=newProduct=>{
+        axios.post('http://localhost:8000/api/product',newProduct)
+        .then(res=>{
+            setProduct([...product, res.data]);
+        })
+
+    }
     return (
         <div>
             
-                <Client/>
+                <Client onSubmitProp={createProduct} initialType="" initialPrice="" initialDescription=""/>
                 <hr/>
                 {load && <ListClient product={product} removeFromDom={removeFromDom}/>}
             
